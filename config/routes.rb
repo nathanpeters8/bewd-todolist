@@ -10,4 +10,7 @@ Rails.application.routes.draw do
 
   # post request endpoint to create new task in database
   post 'tasks' => 'tasks#create'
+
+  # delete request endpoint to delete task in database
+  delete 'tasks/:id' => 'tasks#destroy'
 end

@@ -15,6 +15,18 @@ class TasksController < ApplicationController
         end
     end
 
+    def destroy
+        # find task by id
+        @task = Task.find_by(id: params[:id])
+
+        # delete task and render json response
+        if @task and @task.destroy
+            render json: { success: true }
+        else
+            render json: { success: false }
+        end
+    end
+
     private
 
     # specifies request params need to have task object that contains key 'content'
