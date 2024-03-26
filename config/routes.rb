@@ -13,4 +13,10 @@ Rails.application.routes.draw do
 
   # delete request endpoint to delete task in database
   delete 'tasks/:id' => 'tasks#destroy'
+
+  # put request endpoint to mark task as completed
+  put 'tasks/:id/mark_complete' => 'tasks#mark_complete'
+
+  # put request endpoint to mark task as active
+  put 'tasks/:id/mark_active' => 'tasks#mark_active'
 end

@@ -27,6 +27,26 @@ class TasksController < ApplicationController
         end
     end
 
+    def mark_complete
+        # find task by id
+        @task = Task.find_by(id: params[:id])
+
+        # mark task as completed and render jbuilder file
+        if @task and @task.update(completed: true)
+            render 'tasks/update'
+        end 
+    end
+
+    def mark_active
+        # find task by id
+        @task = Task.find_by(id: params[:id])
+
+        # mark task as active and render jbuilder file
+        if @task and @task.update(completed: false)
+            render 'tasks/update'
+        end 
+    end
+
     private
 
     # specifies request params need to have task object that contains key 'content'
