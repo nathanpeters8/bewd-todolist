@@ -7,4 +7,7 @@ Rails.application.routes.draw do
 
   # Redirect all other paths to index page, which will be taken over by AngularJS
   get '*path' => 'homepage#index'
+
+  # get request endpoint to retrieve all tasks in database
+  get 'tasks' => 'tasks#index'
 end
