@@ -37,6 +37,9 @@ gem 'mail', '>= 2.8.0.rc1'
 # rails_admin gem
 gem 'rails_admin', '~> 2.0'
 
+# bundler
+gem 'bundler', '~> 2.2'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
